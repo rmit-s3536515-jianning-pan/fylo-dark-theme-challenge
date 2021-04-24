@@ -1,0 +1,268 @@
+:root{
+    --dark-blue-1:hsl(217, 28%, 15%);
+    --dark-blue-2:hsl(218, 28%, 13%);
+    --dark-blue-3:hsl(216, 53%, 9%);
+    --dark-blue-4:hsl(219, 30%, 18%);
+
+    --cyan:hsl(176, 68%, 64%);
+    --blue:hsl(198, 60%, 50%);
+    --light-red-error : hsl(0, 100%, 63%);
+
+    --neutral-white:hsl(0, 0%, 100%);
+
+    --mobile-width:375px;
+    --desktop-width:1440px;
+}
+
+body{
+    color:var(--neutral-white);
+    font-family: "Open Sans", sans-serif;
+}
+
+a{
+    color:var(--neutral-white);
+}
+
+.w{
+    min-width:var(--mobile-width);
+    max-width:var(--desktop-width);
+    margin:0 auto;
+}
+
+.flex{
+    display:flex;
+}
+
+#main{
+    
+    /* background:var(--dark-blue-1); */
+    background-color:var(--dark-blue-1);
+    background-image: url(../images/bg-curvy-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    position: relative;
+    /* min-height: 150vh; */
+}
+
+
+/* header  */
+.header{
+    padding:50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 0;
+}
+
+.header .nav ul{
+    display:flex;
+}
+
+.header .nav ul li a{
+    display:block;
+    padding:20px;
+}
+.header .nav ul li a:link,.header .nav ul li a:visited{
+    color:var(--neutral-white);
+}
+
+.header .nav ul li a:hover,.header .nav ul li a:active{
+    /* color:var(--neutral-white); */
+    text-decoration:underline;
+}
+
+/* end of header style */
+
+
+/* start of the banner  */
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.banner h1{
+    font-size:30px;
+    font-weight: 700;
+    margin:10px 0px;
+}
+
+.banner p{
+    /* width:40%; */
+    padding:0 30%;
+    word-spacing: 2px;
+    margin:10px 0;
+}
+
+.banner .button{
+    display: block;
+    width:30%;
+    /* padding:0 30%; */
+    background:linear-gradient(to right,var(--cyan),var(--blue));
+    padding:20px 0;
+    border:none;
+    border-radius: 35px;
+    outline: none;
+    color:var(--neutral-white);
+    font-size: 16px;
+    font-family: "Open Sans",sans-serif;
+    font-weight: 400;
+    text-align: center;
+
+}
+
+
+/* end of banner style  */
+
+
+/* start of features  */
+
+.features{
+    display:flex;
+    padding:200px 0;
+    /* flex-flow:row,wrap; */
+    /* width:100%; */
+    flex-wrap: wrap;
+}
+
+.features > div{
+    flex:50%;
+    margin-bottom: 20px;
+}
+
+.features .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    text-align: center;
+    /* margin:px; */
+    padding:50px 150px;
+}
+.features .box h3{
+    font-size: 20px;
+    margin:5px 0;
+}
+
+.features .box p{
+    margin:10px 0;
+}
+
+/* end of features  */
+
+
+/* start of productive section  */
+
+.productive{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productive h2{
+    font-size: 25px;
+    margin:20px 0;
+}
+
+.productive p{
+    margin:20px 0;
+    text-align: left;
+}
+.productive a{
+    display: block;
+    padding-bottom: 5px;
+    /* height:30px;
+    line-height: 30px; */
+}
+
+.productive a .icon-arrow{
+    display: inline-block;
+    vertical-align: middle;
+    /* width:30px;
+    height:30px; */
+    /* height:100%; */
+    width:15px;
+    height:15px;
+    line-height: 15px;
+    /* background: url(../images/icon-arrow.svg) no-repeat bottom center; */
+}
+
+.productive a:hover{
+    text-decoration: underline;
+}
+/* end of productive section  */
+
+
+
+
+/* start of review  */
+.reviews{
+    display:flex;
+    justify-content: center;
+    position: relative;
+    padding:300px 0;
+}
+
+
+.reviews .review{
+    
+    position: relative;
+    background-color: var(--dark-blue-4);
+    color:var(--neutral-white);
+    padding:20px;
+    margin:20px;
+    z-index:1 ;
+}
+
+
+.reviews .review .author{
+    display: flex;
+    align-items: center;
+    margin:20px 0;
+}
+
+
+.reviews .review .author .profile{
+    width:30px;
+    height:30px;   
+    border-radius: 50%;
+}
+
+.reviews .review .author .pos{
+    padding-left:20px;
+    display: flex;
+    flex-direction: column;
+}
+.review:nth-child(1)::before{
+    content:"";
+    position: absolute;
+    left:-5px;
+    top:-25px;
+    display:block;
+    width:100px;
+    height:100px;
+    background:url(../images/bg-quotes.png) no-repeat;
+    
+    z-index:0 !important;
+}
+
+/* end of reviews  */
+
+/* start of access  */
+
+.access{
+    position: absolute;
+    bottom:0;
+    left:50%;
+    transform: translate(-50%,50%);
+    z-index:999;
+}
+
+
+.footer{
+    background-color: var(--dark-blue-3);
+    padding-top:200px;
+}
