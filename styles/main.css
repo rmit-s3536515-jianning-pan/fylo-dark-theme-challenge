@@ -26,6 +26,7 @@ a{
 .w{
     min-width:var(--mobile-width);
     max-width:var(--desktop-width);
+    width:90%;
     margin:0 auto;
 }
 
@@ -85,10 +86,14 @@ a{
     align-items: center;
     overflow: hidden;
 }
+.banner .banner-image{
+    width:80%;
+    margin:0 auto;
+}
 .banner img{
     display: block;
-    max-width: 100%;
-    /* width: 100%; */
+    /* max-width: 100%; */
+    width: 100%;
     /* width:100%; */
 }
 .banner h1{
@@ -165,6 +170,7 @@ a{
 
 .productive{
     display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -212,6 +218,7 @@ a{
 /* start of review  */
 .reviews{
     display:flex;
+    flex-direction: column;
     justify-content: center;
     position: relative;
     padding:300px 0;
@@ -332,6 +339,7 @@ a{
 
 .footer-description{
     display: flex;
+    flex-direction: column;
     margin-top:50px;
 
 
@@ -410,16 +418,16 @@ a{
 
 /* start of media  */
 
-@media screen and (max-width:1000px){
+@media screen and (min-width:600px){
     .productive{
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .reviews{
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .footer-description{
-        flex-direction: column;
+        flex-direction: row;
     }
 }
